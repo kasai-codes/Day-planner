@@ -9,12 +9,12 @@ $("#currentDay").text(currentTime);
 // .each used to iterate through (hour) and deteremine if timeBlock should be grey, red, or green depending on the moment in time.
 
 $.each(timeBlock, function (i, hour) {
-  var hourId = parseInt($(this).attr("id"));
-  if (hourId === currentMoment) {
+  var hourEl = parseInt($(this).attr("id"));
+  if (hourEl === currentMoment) {
     $(this).next().addClass("present");
-  } else if (hourId < currentMoment) {
+  } else if (hourEl < currentMoment) {
     $(this).next().addClass("past");
-  } else if (hourId > currentMoment) {
+  } else if (hourEl > currentMoment) {
     $(this).next().addClass("future");
   }
 });
