@@ -1,39 +1,32 @@
-// console.log("test")
-
-
-
-
 //  Adds the current day with moment(), and the format in which to be diplayed on the page.
 var currentTime = moment().format("MMMM Do YYYY");
-$("#currentDay").text(currentTime);
 
 var timeBlock = $(".hour");
 var currentMoment = parseInt(moment().format("H"));
+$("#currentDay").text(currentTime);
 
-// Function to check each hour and add a class to then select with css.
-// .each used to iterate through hour and deteremine if timeBlock should be grey, red, or green.
+// Function to check each hour and add a class to then select and style with css.
+// .each used to iterate through (hour) and deteremine if timeBlock should be grey, red, or green depending on the moment in time.
+
 $.each(timeBlock, function (i, hour) {
-  var hourEl = parseInt($(this).attr("id"));
-  if (hourEl === currentMoment) {
+  var hourId = parseInt($(this).attr("id"));
+  if (hourId === currentMoment) {
     $(this).next().addClass("present");
-  } else if (hourEl < currentMoment) {
+  } else if (hourId < currentMoment) {
     $(this).next().addClass("past");
-  } else if (hourEl > currentMoment) {
+  } else if (hourId > currentMoment) {
     $(this).next().addClass("future");
   }
-// console.log(this)
-
 });
 
 // If Save button clicked, set item to local storage.
-
+// Returns the value of the parent element.
 $(".saveBtn").on("click", function (event) {
   var eventItem = event.target.parentElement.previousElementSibling.children[0].value;
   localStorage.setItem(event.target.attributes[0].value, eventItem);
-
-  // console.log(event)
 });
-
+// .ready used here to have the function accesible after the page has loaded.
+// null used to check for the value null to determine if the variable has been filled with an object reference at a later time.
 $(document).ready(function () {
   if (localStorage["9am"] !== null && localStorage["9am"] !== undefined) {
     var nineAm = $("<p>" + localStorage["9am"] + "</p>");

@@ -1,14 +1,8 @@
-# What data does my application need?
+# Application outline:
 
-    - the current dat and time 
-    - the current hour of the day
-
-
-# What informaton will my application interact with? 
-
-- localstorage
-    - saved text for each event
-
-    - localstorage/setItem('hour-9', {'9': "hour 9 ext value"};
-
+    - the current date and time.
+    - the current hour of the day.
+    - a save button to save input from user in the text area with localstorage.
+    - timeblock color depends on current hour of the day.
+    
 
