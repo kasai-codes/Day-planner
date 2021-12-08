@@ -25,8 +25,8 @@ $(".saveBtn").on("click", function (event) {
   var eventItem = event.target.parentElement.previousElementSibling.children[0].value;
   localStorage.setItem(event.target.attributes[0].value, eventItem);
 });
-// .ready used here to have the function accesible after the page has loaded.
-// null used to check for the value null to determine if the variable has been filled with an object reference at a later time.
+// .ready  to have the function accesible after the page has loaded.
+// I realize i could use a loop or function to not have repeating lines of code but ran out of time.
 $(document).ready(function () {
   if (localStorage["9am"] !== null && localStorage["9am"] !== undefined) {
     var nineAm = $("<p>" + localStorage["9am"] + "</p>");
