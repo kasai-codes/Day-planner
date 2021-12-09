@@ -8,9 +8,9 @@ Built by utilizing jQuery, Bootsrap, Javascript, and Moment.js this application 
 
 
 ## Preveiw 
-GitHub Pages: https://kasaipreston.github.io/Reminder-Calender/
+GitHub Pages: https://kasaipreston.github.io/Day-planner/
 
-GitHub Repository: https://github.com/kasaipreston/Reminder-Calender
+GitHub Repository: https://github.com/kasaipreston/Day-planner
 
 
 ![Screenshot](screenshot.png)
