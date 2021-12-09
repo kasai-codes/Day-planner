@@ -26,7 +26,7 @@ $(".saveBtn").on("click", function (event) {
   localStorage.setItem(event.target.attributes[0].value, eventItem);
 });
 // .ready  to have the function accesible after the page has loaded.
-// I realize i could use a loop or function to not have repeating lines of code but ran out of time.
+// making sure text is there to be saved
 $(document).ready(function () {
   if (localStorage["9am"] !== null && localStorage["9am"] !== undefined) {
     var nineAm = $("<p>" + localStorage["9am"] + "</p>");
